@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="text-center">Registro de empleados</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4 position-relative">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="telefono" class="form-label">telefono</label>
+                        <input type="text" class="form-control" id="telefono" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="correo" class="form-label">correo</label>
+                        <input type="text" class="form-control" id="correo" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="puesto" class="form-label">puesto</label>
+                        <input type="text" class="form-control" id="puesto" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="fecha-nacimiento" class="form-label">fecha-nacimiento</label>
+                        <input type="text" class="form-control" id="fecha-nacimiento" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="fecha-registro" class="form-label">fecha-registro</label>
+                        <input type="text" class="form-control" id="fecha-registro" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="Responsabilidades" class="form-label">Responsabilidades</label>
+                        <input type="text" class="form-control" id="Responsabilidades" required>
+                        <div class="invalid-tooltip">Complete los datos</div>
+                    </div>
+                    <button type="submit" class="btn btn-warning fw-bold">Enviar</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }else{
+          alert("datos validados")
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
+    </body>
+</html>
